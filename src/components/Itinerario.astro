@@ -1,0 +1,126 @@
+---
+import ElementoItinerario from "./ElementoItinerario.astro";
+
+const ITINERARIO = [
+  {
+    id: 1,
+    title: "Conexión y Reconocimiento – “Pies Descalzos”",
+    time: "Sábado 17",
+    description: "Caminar descalzo es conectar el alma con la tierra que nos recibe.",
+    activities: [
+      "Traslado al hotel y check-in",
+      "Desayuno o Brunch según la hora en “Maman’s Tribeca” o en Balthazar’s",
+      "Recorrido por los barrios de Tribeca, East Village, Soho, Noho y Washington Square, apropiándose del lugar que nos aloja",
+      "Almuerzo: En Greenwich Village",
+      "15:00 - Descanso - Tiempo libre",
+      "17:30 - Optativo: Catedral de San Patricio - misa",
+      "Recorrido por la zona - Macy’s Flower Show"
+    ],
+  },
+  {
+    id: 2,
+    title: "El Arte de Escuchar – Oído",
+    time: "Domingo 18",
+    description: "La música del arte resuena en el silencio de quien sabe escuchar.",
+    activities: [
+      "Caminata por el Upper East Side",
+      "Recorrido apreciando su arquitectura",
+      "10:30 - Visita a la Neue Galerie: Obras de Kandinsky y café en Sabarsky",
+      "Recorrido por Central Park: Picnic y Land Art con actividades de escucha y mindfulness",
+      "15:00 - Tiempo libre - descanso (opcional: Grand Bazaar Upper West Side)",
+      "18:00 - Recorrido en barco por el río Hudson con cena incluida (hay que estar 17:30 en el Pier 61 Chelsea)"
+    ],
+  },
+  {
+    id: 3,
+    title: "Movimiento y Expresión",
+    time: "Lunes 19",
+    description: "El arte en movimiento es la danza perpetua del espíritu creativo.",
+    activities: [
+      "Visita al Whitney Museum y su terraza",
+      "Exploración de Little Island",
+      "Visita al Chelsea Market",
+      "Recorrido por High Line, apreciando su paisajismo y arquitectura",
+      "Visita a Hudson Yards (posibilidad de hacer shopping)",
+      "Pier 57 al atardecer (rooftop, food hall)"
+    ],
+  },
+  {
+    id: 4,
+    title: "Reflexiones del Tiempo y el Vacío",
+    time: "Martes 20",
+    description: "En el vacío, el tiempo encuentra su eco y nos invita a reflexionar.",
+    activities: [
+      "Visita al Memorial 9/11",
+      "Recorrido por el Oculus y la nueva arquitectura del sur",
+      "Paseo por Battery Park",
+      "Cruce del Puente de Brooklyn (caminando o en metro)",
+      "Almuerzo en Dumbo",
+      "Tiempo libre: Oportunidad de ir a tiendas outlet",
+      "Visita a Bushwick: Murales callejeros o recorrido por Brooklyn Heights"
+    ],
+  },
+  {
+    id: 5,
+    title: "Texturas y Colores – Tacto",
+    time: "Miércoles 21",
+    description: "A través del tacto, sentimos la historia tejida en cada hilo del arte.",
+    activities: [
+      "Visita al MoMA: exposición “Tejiendo el universo”",
+      "Recorrido por Rockefeller Center",
+      "Almuerzo libre en Greenacre Park",
+      "Cruce en teleférico a Roosevelt Island",
+      "Recorrida por Park Avenue y Quinta Avenida",
+      "16:00 - 18:00 hs. Tiempo libre",
+      "19:00 - Teatro “The Book of Mormon” en Broadway",
+      "Recorrido por Times Square"
+    ],
+  },
+  {
+    id: 6,
+    title: "Impresiones de Luz – Vista",
+    time: "Jueves 22",
+    description: "La luz transforma cada mirada en una nueva obra de arte.",
+    activities: [
+      "Recorrido en bicicleta o caminata por Central Park hasta Harlem (opcional transporte público)",
+      "14:00 - Visita al Met Museum y su terraza",
+      "Tiempo libre",
+      "Visita a Columbus Circle",
+      "Espectáculo de jazz en Lincoln Center"
+    ],
+  },
+  {
+    id: 7,
+    title: "Percepción",
+    time: "Viernes 23",
+    description: "Cada espacio cuenta una historia que espera ser leída por quien la recorre.",
+    activities: [
+      "Visita al Guggenheim Museum",
+      "Paseo por Bryant Park",
+      "Visita a la Biblioteca Pública de Nueva York",
+      "Recorrido por Grand Central Station",
+      "Visita a The Summit"
+    ],
+  },
+  {
+    id: 8,
+    title: "Despedida y Reflexión",
+    time: "Sábado 24",
+    description: "Cada viaje es una página escrita en el libro de nuestra vida.",
+    activities: [
+      "Prepararse y dejar las valijas en el hotel antes de las 12:00 h",
+      "10:00 - Opcional: Walking tour por Flatiron District",
+      "Resto del día libre",
+      "Salida del hotel a las 17:00 h"
+    ],
+  }
+];
+
+---
+
+<ol class="relative border-s border-gray-400">                  
+    {ITINERARIO.map((item) => (
+        <ElementoItinerario key={item.id} title={item.title} time={item.time} description={item.description} activities={item.activities}/>
+    ))}
+</ol>
+

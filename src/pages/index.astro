@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import About from '../components/About.astro';
+import Lugares from '../components/Lugares.astro';
+import Contact from '../components/Contact.astro';
+import Itinerario from '../components/Itinerario.astro';
+
+---
+
+<Layout 
+	title="Viajes Sentidos" 
+	description="Explora Nueva York de manera diferente."
+>
+	<SectionContainer class="bg-[url('../images/BrooklynBridge.webp')] bg-cover bg-center flex flex-col justify-center items-center h-screen">
+		<div class="backdrop-blur-[3px] h-full w-full flex flex-col justify-center items-center p-4">		
+			<h1 class="mb-8 text-7xl text-center font-bold text-white/95">VIAJE<span class="text-sky-700">SENTIDOS</span></h1>
+			<h2 class="text-2xl text-center text-amber-300">
+				“Ahora los oídos de mis
+				oídos despiertan
+				y ahora los ojos de mis ojos
+				están abiertos”
+				
+				e.e.cummings</h2>
+		</div>
+
+	</SectionContainer>
+
+	<SectionContainer id="el-equipo" class="p-5 pt-20 flex flex-col justify-center items-center bg-white/95">
+		<About />
+	</SectionContainer>
+
+	<SectionContainer id="lugares" class="p-5 pt-20 flex flex-col justify-center items-center bg-white/95">
+		<h1 class="mb-20 text-2xl sm:text-2xl md:text-3xl lg:text-4xl">Algunos Lugares que vamos a visitar en Nueva York</h1>
+		<Lugares />
+	</SectionContainer>
+
+	<SectionContainer id="itinerario" class="lg:p-24 md:p-16 sm:p-5 p-5 flex flex-col justify-center items-center bg-white/95">
+		<h1 class="mb-20 text-2xl sm:text-2xl md:text-3xl lg:text-4xl">Itinerario (Mayo - 2025)</h1>
+		<Itinerario />
+	</SectionContainer>
+
+	<SectionContainer id="contacto" class="p-5 pt-20 flex flex-col justify-center items-center bg-white/95">
+		<Contact />
+	</SectionContainer>
+
+
+</Layout>

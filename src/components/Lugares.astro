@@ -1,0 +1,50 @@
+---
+import Card from "./Card.astro"
+
+const lugares = [
+  {
+    "image": "https://images.adsttc.com/media/images/523a/2a12/e8e4/4eef/7900/022c/large_jpg/MoMA_Tim_Hursley_garden.jpg?1379543564",
+    "title": "Museum of Modern Art (MoMA)",
+    "description": "El MoMA alberga una de las colecciones más completas de arte moderno y contemporáneo del mundo, incluyendo obras de Van Gogh, Picasso y Warhol.",
+    "link": "https://www.moma.org/"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/1200px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg",
+    "title": "Museo Metropolitano de Arte (Met)",
+    "description": "El Met presenta más de dos millones de obras que abarcan 5,000 años de arte, desde arte egipcio antiguo hasta pinturas modernas.",
+    "link": "https://www.metmuseum.org/"
+  },
+  {
+    "image": "https://image.nuevayork.com/wp-content/uploads/2014/09/Guggenheim-Museum-in-New-York.jpeg",
+    "title": "Museo Solomon R. Guggenheim",
+    "description": "Diseñado por Frank Lloyd Wright, este museo exhibe una colección de arte moderno y contemporáneo en un edificio icónico.",
+    "link": "https://www.guggenheim.org/"
+  },
+  {
+    "image": "https://images.ctfassets.net/1aemqu6a6t65/6PtAxTZ9lNw7OfUTCjeVgP/4e0e54d76289d1feef8de9c0edb542d6/dccc-10-18_7cfd0b94-5056-a36f-23bc9792438fd56b",
+    "title": "Dizzy Jazz Club",
+    "description": "Espectaculo de Jazz en el emblematico Lincoln Center, uno de los lugares más prestigiosos para la música clásica y contemporánea.",
+    "link": "https://jazz.org/dizzys/"
+  },
+  {
+    "image": "https://i0.wp.com/www.rnlagos.com/dev/wp-content/uploads/2012/08/High-Line-Nueva-York.jpg",
+    "title": "High Line",
+    "description": "Un parque elevado transformado de una antigua vía férrea, que combina arte público, jardines y vistas únicas de la ciudad.",
+    "link": "https://www.thehighline.org/"
+  },
+  {
+  "image": "https://image.nuevayork.com/wp-content/uploads/2021/01/Little-Island-in-New-York.jpg",
+  "title": "Little Island",
+  "description": "Little Island es un parque flotante inaugurado en 2021 sobre el río Hudson en Manhattan. Diseñado por Heatherwick Studio, cuenta con paisajes ondulados, 132 estructuras en forma de tulipán que sustentan el parque.",
+  "link": "https://www.littleisland.org/"
+}
+]
+---
+
+<div class="flex flex-col items-center text-center gap-5 mb-20">
+    <div class="flex flex-wrap justify-center gap-10 mb-20">
+        {lugares.map(lugar => (
+            <Card image={lugar.image} title={lugar.title} description={lugar.description} link={lugar.link} />
+        ))}
+    </div>
+</div>
