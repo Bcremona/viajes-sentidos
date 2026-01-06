@@ -7,13 +7,9 @@ import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://bcremona.github.io',
+  base: '/viajes-sentidos',
   vite: {
     plugins: [tailwindcss()]
   },
-
-  adapter: netlify(),
-
-  experimental: {
-    session: true,
-  }
 });
